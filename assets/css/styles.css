@@ -1,0 +1,551 @@
+/*
+1. Position
+2. Box Model
+3. Tipografy
+4. Visuals
+5. Others
+*/
+
+:root {
+  /* colors */
+--warm-black: #333333;
+--black: #201e1c;
+--off-white: #FAF8F7;
+--just-white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 63.5%;
+  font-family: 'IBM Plex Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: var(--warm-black);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+/* .topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+} */
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  width: 100%;
+  min-width: 320px;
+  height: 475px;
+  text-align: center;
+}
+
+.home .profile {
+  /* change these two values to define the size of your circle */
+  height: 140px;
+  width: 129px;
+  /* the following values are independent of circle size */
+  align-self: center;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  background-size: 100% auto;
+}
+
+.home--title-container {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  height: 218px;
+  margin-top: 10px;
+  text-align: center;
+  align-self: center;
+}
+
+.home--title-container h1 {
+  font-size: 3.0rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 2.9rem;
+}
+
+.home--title-container p {
+  font-size: 1.6rem;
+  font-style: normal;
+  line-height: 2.9rem;
+  text-align: center;
+  color: var(--warm-black);
+}
+
+.home--title-container .home--buttom-cv {
+  /* position: absolute; */
+  left: calc(50% - 68px);
+  top: 266px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px;
+  width: 148px;
+  height: 39px;
+  background-color: var(--off-white);
+  /* shadow */
+  box-shadow: 0px 4px 8px rgba(89, 79, 30, 0.16);
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.home--title-container .home--buttom-portfolio {
+  /* position: absolute; */
+  left: calc(50% - 68px);
+  top: 316px;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px;
+  width: 148px;
+  height: 39px;
+  background-color: var(--warm-black);
+  /* shadow */
+  box-shadow: 0px 4px 8px rgba(89, 79, 30, 0.16);
+  border: none;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--just-white);
+}
+
+.home--buttom-cv  span {
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  background-image: url('../icons/down-arrow.svg');
+}
+
+.home--title-container img {
+  display: inline-block;
+  width: 41px;
+  height: 38px;
+  left: 74px;
+  top: 397px;
+  margin-left: 21px;
+  margin-top: 25px;
+}
+
+.about-me-container {
+  width: 100%;
+  height: 270px;
+  min-width: 320px;
+  text-align: center;
+  background-color: var(--warm-black);
+}
+
+.about-me-container h2 {
+  padding-top: 10px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--just-white);
+}
+
+.about-me-container p {
+  width: 85%;
+  margin: 15px auto;
+  padding-top: 10px;
+  font-size: 1.3rem;
+  text-align: justify;
+  font-weight: 100;
+  line-height: 1.8rem;
+  color: var(--just-white);
+}
+
+.skills-card--container {
+  display: flex;
+  height: 516px;
+  margin-top: -40px;
+  text-align: center;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
+.skills-container {
+  position: relative;
+  scroll-snap-align: center;
+  width: 80%;
+  min-width: 190px;
+  max-width: 300px;
+  height: 440px;
+  margin: 20px 10px;
+  padding: 0 15px;
+  background-color: var(--off-white);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(89, 73, 30,0.16);
+}
+.ds {
+  display: flex;
+  margin: 15px auto;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  background-image: url(../icons/rectangle.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.skills-info-container--title {
+  padding-top: 10px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem; 
+}
+
+.skills-info-container p {
+  width: 90%;
+  margin: 0px auto;
+  padding-top: 5px;
+  font-size: 1.3rem;
+  font-weight: 100;
+  line-height: 1.8rem;
+}
+
+.skills-info-container--subtitle {
+  padding-top: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.6rem; 
+}
+
+.skilss-list {
+  list-style: none;
+}
+
+.skilss-list li {
+  width: 90%;
+  margin: 0px auto;
+  padding-top: 5px;
+  font-size: 1.3rem;
+  font-weight: 100;
+  line-height: 1.8rem;
+}
+
+.backend {
+  display: flex;
+  margin: 15px auto;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  background-image: url(../icons/squares.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.platzi {
+  display: flex;
+  margin: 20px auto;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  background-image: url(../icons/platzi.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.portfolio {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding: 20px 10px;
+  background-color: var(--warm-black);
+}
+
+.portfolio-cards--container a {
+  text-decoration: none;
+}
+
+.portfolio-title {
+  padding-top: 10px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  text-align: center;
+  color: var(--just-white);
+}
+
+.portfolio-paragraph {
+  width: 85%;
+  margin: 15px auto;
+  padding-top: 10px;
+  font-size: 1.3rem;
+  text-align: justify;
+  font-weight: 100;
+  line-height: 1.8rem;
+  color: var(--just-white);
+}
+
+.portfolio-paragraph a {
+  color: #ffb703;
+}
+
+.portfolio-detail--card {
+  width: 90%;
+  min-width: 288px;
+  max-width: 400px;
+  height: 200px;
+  margin: 15px auto;
+  padding: 10px;
+  background-color: var(--black);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-ds {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 10px;
+  background-image: url(../icons/rect-white.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.portfolio-backend {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 10px;
+  background-image: url(../icons/sqr-white.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.portfolio-detail--card-title {
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: var(--just-white);
+}
+
+.portfolio-detail--card-description {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 5px;
+  line-height: 1.8rem;
+  text-decoration: none;
+  color: #808080;
+}
+
+.portfolio-detail--card-tech {
+  margin-top: 10px;
+  font-size: 1.0rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  text-decoration: none;
+  color: #808080;
+}
+
+.contact {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding: 20px 0px;
+}
+
+.contact-description {
+  height: 150px;
+  background-color: var(--warm-black);
+}
+
+.contact-description h2 {
+  padding-top: 10px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--just-white);
+  text-align: center;
+}
+
+.contact-description p {
+  width: 85%;
+  margin: 15px auto;
+  padding-top: 10px;
+  font-size: 1.3rem;
+  text-align: justify;
+  font-weight: 100;
+  line-height: 1.8rem;
+  color: var(--just-white);
+}
+
+.contact-detail--container {
+  width: 90%;
+  margin: -40px 20px 20px;
+}
+
+.contact-detail--container-card {
+  position: relative;
+  scroll-snap-align: center;
+  width: 80%;
+  min-width: 190px;
+  max-width: 300px;
+  height: 120px;
+  margin: 20px auto;
+  padding: 0 15px;
+  background-color: var(--off-white);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(89, 73, 30,0.16);
+  text-decoration: none;
+}
+
+.email {
+  display: flex;
+  margin: 0px auto;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  background-image: url(../icons/EnvelopeFill.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.whastsapp {
+  display: flex;
+  margin: 0px auto;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  background-image: url(../icons/whatsapp.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-card--title {
+  padding-top: 10px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--black);
+  text-align: center;
+}
+
+.contact-card--desciption {
+  padding-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--black);
+  text-align: center; 
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 15px;
+}
+
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: var(--warm-black);
+}
+
+footer  section h2 {
+  padding-top: 10px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--just-white);
+  text-align: center; 
+}
+
+.nav-container p {
+  padding-top: 10px;
+  font-size: 1.4rem;
+  font-weight: medium;
+  line-height: 2.6rem;
+  color: var(--just-white);
+  text-align: center; 
+}
+
+.tail {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 5px;
+  line-height: 1.8rem;
+  text-decoration: none;
+  color: #808080;
+  text-align: center;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

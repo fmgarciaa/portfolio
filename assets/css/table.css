@@ -1,0 +1,67 @@
+.home {
+  height: 420px;
+}
+
+.home--title-container {
+  justify-content: center;
+}
+
+.buttoms-container {
+  justify-content: center;
+}
+
+.home--title-container .home--buttom-portfolio {
+  margin-left: 15px;
+}
+
+.about-me-container h2 {
+  font-size: 2.8rem;
+}
+.about-me-container p {
+  width: 40%;
+  font-size: 1.5rem;
+}
+
+.portfolio-title {
+  font-size: 2.8rem;
+}
+
+.skills-card--container {
+  justify-content: center;
+  margin-top: -80px;
+}
+
+.portfolio-paragraph {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.portfolio-cards--container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.contact-description p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.contact-description h2 {
+  font-size: 2.8rem;
+}
+
+.contact-detail--container {
+  margin: -40px auto 20px auto;
+}
+
+.nav-container {
+  max-width: 35%;
+  margin: auto;
+}
+
+.bug {
+  width: 400px;
+}
